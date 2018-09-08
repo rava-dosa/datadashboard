@@ -1,0 +1,46 @@
+<table style="width:100%">
+  <tr>
+    <th>instant</th>
+    <th>dteday</th>
+    <th>season</th>
+    <th>yr</th>
+    <th>mnth</th>
+    <th>holiday</th>
+    <th>weekday</th>
+    <th>workingday</th>
+    <th>weathersit</th>
+    <th>temp</th>
+    <th>atemp</th>
+    <th>hum</th>
+    <th>windspeed</th>
+    <th>casual</th>
+    <th>registered</th>
+    <th>cnt</th>
+  </tr>
+  {% for x in item %}
+  <tr>
+    <td>{{x['instant']}}</td>
+    <td>{{x['dteday']}}</td>
+    <td>{{x['season']}}</td>
+    <td>{{x['yr']}}</td>
+    <td>{{x['mnth']}}</td>
+    <td>{{x['holiday']}}</td>
+    <td>{{x['weekday']}}</td>
+    <td>{{x['workingday']}}</td>
+    <td>{{x['weathersit']}}</td>
+    <td>{{x['temp']}}</td>
+    <td>{{x['atemp']}}</td>
+    <td>{{x['hum']}}</td>
+    <td>{{x['windspeed']}}</td>
+    <td>{{x['casual']}}</td>
+    <td>{{x['registered']}}</td>
+    <td>{{x['cnt']}}</td>
+  </tr>
+  {% endfor %}
+</table> 
+{% if flagn==1 %}
+  <li><a href="/browse/{{name|int+1}}" }>[Next]</a></li>
+{% endif %}
+{% if flagp==1 %}
+  <li><a href="/browse/{{name|int-1}}" }>[Prev]</a></li>
+{% endif %}

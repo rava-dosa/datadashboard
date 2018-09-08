@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+{% block body %}
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Data Dashboard</title>
+<link rel="stylesheet" href="../static/styles.css" type="text/css" />
+<script src="{{ url_for('static', filename='js/form.js') }}"></script>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+		<section id="body" class="width">
+			<aside id="sidebar" class="column-left">
+			<header>
+				<h1><a href="#">Apoorva&copy;</a></h1>
+				<h2>Data Dashboard</h2>
+			</header>
+			<nav id="mainnav">
+  				<ul>
+          
+	            		<li class="selected-item"><a href="index.html">Home</a></li>
+	           		    {% for x in item %}
+	           		    	<li><a href="/{{x}}" id={{x}} name={{x}}>{{x}}</a></li>
+	           		    {% endfor %}
+          
+	        	</ul>
+			</nav>
+
+			
+			
+			</aside>
+			<section id="content" class="column-right">
+                		
+	    <article>
+				
+			
+			<h2>Introduction to anatine</h2>
+			<div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
+
+            <p>Welcome to anatine, a free premium valid CSS3 &amp; HTML5 web template from <a href="http://zypopwebtemplates.com/" title="ZyPOP">ZyPOP</a>. This responsive template is completely <strong>free</strong> to use permitting a link remains back to  <a href="http://zypopwebtemplates.com/" title="ZyPOP">http://zypopwebtemplates.com/</a>.</p>
+
+<p>Should you wish to use this template unbranded you can buy a template license from our website for 8.00 GBP, this will allow you remove all branding related to our site, for more information about this see below.</p>	
+            
+            <p>This template has been tested in:</p>
+			<h3>Create more project</h3>
+				<form class="form-inline" id="f1">
+					  <div class="form-group">
+					    <label class="sr-only" for="emailInput">Name of dashboard</label>
+					    <input type="text" class="form-control" id="emailInput" placeholder="Name of project">
+					  </div>
+					  <div class="form-group">
+					    <!-- <label class="sr-only" for="nameInput">Name</label> -->
+					    <input type="hidden" value="addproject" class="form-control" id="nameInput" placeholder="First Name">
+					  </div>
+					  	<div class="form-group">
+					    <!-- <label class="sr-only" for="passInput">Password&emsp;&emsp;</label> -->
+					    <input type="hidden" class="form-control" id="passInput" placeholder="Password">
+					  </div>
+		  		<button class="button" type="submit" class="btn btn-default">Submit</button>
+				</form>
+
+            <ul class="styledlist">
+                <li>Firefox</li>
+                <li>Opera</li>
+                <li>IE</li>
+ 		<li>Safari</li>
+                <li>Chrome</li>
+            </ul>
+		</article>
+		</section>
+
+		<div class="clear"></div>
+
+	</section>
+	
+
+</body>
+{% endblock %}
+</html>
