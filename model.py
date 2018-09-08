@@ -39,9 +39,6 @@ def avg(name,date1,date2):
 		l.append(s)
 	i=len(l)
 	for x in l:
-		print x[0]
-		print x[1]
-		print x[6]
 		# pdb.set_trace()	
 		for y in range(0,7):
 			avg[y]=avg[y]+float(x[y])
