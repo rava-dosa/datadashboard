@@ -3,6 +3,11 @@ import dataset
 import settings
 import pdb
 
+def get_table():
+	db=dataset.connect('sqlite:///mydatabase.db')
+	l=db.tables
+	return l
+
 def insert(name,lis):
 	db=dataset.connect('sqlite:///mydatabase.db')
 	Table=db[name]

@@ -38,10 +38,14 @@
 
 <p>Should you wish to use this template unbranded you can buy a template license from our website for 8.00 GBP, this will allow you remove all branding related to our site, for more information about this see below.</p>	
             
-            <p>This template has been tested in:</p>
             <div class="container">
 			<br><br><br><br>
 					<ul id="ct2"></ul>
+	           		    {% for x in name %}
+	           		    	<li><a href="/xyz/{{x}}" id={{x}} name={{x}}>{{x}}</a></li>
+	           		    {% endfor %}
+
+
 				<h3>upload csv</h3>
       <form action = "/uploader" id= "f5" method = "POST" enctype = "multipart/form-data" >
          <input type = "file" name = "file" />

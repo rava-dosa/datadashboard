@@ -41,13 +41,13 @@
 			<br><br><br><br>
 					<ul id="ct2"></ul>
           <h3>Browse Data</h3>
-      		<form action = "/uploader/browse" id= "f7" method = "POST" >
+      		<form action = "/browse/{{name}}" id= "f7" method = "POST" >
       		<input type="date1"  class="form-control" name="date1" placeholder="Start Date:2016-01-01">
       		<input type="date1"  class="form-control" name="date2" placeholder="End Date:  2017-01-01">
          	<input type = "submit"/>
       </form>
            <h3>Get average</h3>
-      		<form action = "/uploader/average" id= "f8" method = "POST" >
+      		<form action = "/average/{{name}}" id= "f8" method = "POST" >
       		<input type="date1"  class="form-control" name="date1" placeholder="Start Date:2016-01-01">
       		<input type="date1"  class="form-control" name="date2" placeholder="End Date:  2017-01-01">
          	<input type = "submit"/>
