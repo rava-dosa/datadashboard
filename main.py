@@ -64,11 +64,12 @@ def browser(name=None):
 
 @app.route('/browse/pagi/<name>',methods=['GET'])
 def pagi(name=None):
-	if(len(itemy)-(10*int(name)+10)>=10):
-		return render_template("table.html",item=itemy[10*int(name):10*int(name)+10],flagn=1,flagp=1, name=name)
+	num=10*int(name)
+	if(len(itemy)-(num)>=10):
+		return render_template("table.html",item=itemy[num:num+10],flagn=1,flagp=1, name=name)
 		print "hi"
 	else:
-		return render_template("table.html",item=itemy[10*int(name):],flagn=0,flagp=1, name=name)
+		return render_template("table.html",item=itemy[num:],flagn=0,flagp=1, name=name)
 
 @app.route('/average/<name>',methods=['POST'])
 def browser1(name=None):
